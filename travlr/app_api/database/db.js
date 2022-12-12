@@ -53,4 +53,4 @@ mongoose.connection.on('connected', () => {
 connect();
 
 // bring in Mongoose Schema
-require('./travlr');
+require('./models/travlr');
