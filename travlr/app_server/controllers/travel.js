@@ -1,8 +1,8 @@
+const { response } = require('express');
 const request = require('request');
 const apiOptions = {
     server: 'http://localhost:3000'
-};
-
+}
 
 
 /* GET travel view */
@@ -43,11 +43,12 @@ const travelList = (req, res) => {
             if (err) {
                 console.error(err);
             }
+            console.log('statusCode: ', response && response.statusCode)
             renderTravelList(req, res, body);
         }
     )
 }
 
 module.exports = {
-    travel
+    travelList
 }
